@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { TouchableOpacity, View, Text, Dimensions, StyleSheet } from 'react-native';
 
 const { width } = Dimensions.get('window');
 
-export default class ColorPalette extends Component {
+export default class ColorPalette extends PureComponent {
   static getContrastColor(hex) {
     return (parseInt(hex.substring(1), 16) > 0xffffff / 2) ? 'black' : 'white';
   }
